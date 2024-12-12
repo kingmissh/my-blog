@@ -208,3 +208,119 @@ code {
 .goals-list li:hover {
     transform: translateX(10px);
 }
+
+/* 移动端响应式样式 */
+@media screen and (max-width: 768px) {
+    /* 导航栏样式 */
+    header {
+        position: relative;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--header-bg);
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    /* 汉堡菜单按钮 */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        padding: 0.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--text-color);
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* 主要内容区域 */
+    main {
+        padding: 0 1rem;
+        margin-top: 1rem;
+    }
+
+    /* 文章列表样式 */
+    .article-preview {
+        padding: 1rem 0;
+    }
+
+    /* 主题切换按钮 */
+    .theme-switch {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    /* 页脚样式 */
+    footer {
+        position: relative;
+        margin-top: 2rem;
+    }
+
+    /* 代码块样式 */
+    pre {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* 联系方式样式 */
+    .contact-info {
+        padding: 1rem;
+    }
+
+    /* 关于页面样式 */
+    .about-content {
+        padding: 0 1rem;
+    }
+
+    .skills-list li,
+    .goals-list li {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) {
+    nav ul li a,
+    .article-preview a,
+    .contact-info a {
+        padding: 0.5rem 0;
+    }
+
+    .skills-list li:hover,
+    .goals-list li:hover {
+        transform: none;
+    }
+}

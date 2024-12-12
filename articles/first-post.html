@@ -9,9 +9,14 @@
 <body>
     <button class="theme-switch" onclick="toggleTheme()">切换主题</button>
     <header>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <h1>Git学习笔记</h1>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="../index.html">返回首页</a></li>
             </ul>
         </nav>
@@ -74,7 +79,7 @@ git reset --hard HEAD^  # 撤销最近一次提交</code></pre>
             <section>
                 <h3>8. 查看文件历史</h3>
                 <p>查看特定文件的修改历史。</p>
-                <pre><code>git log -p 文件名     # 查看文件的修改历史
+                <pre><code>git log -p 文件名     # 查���文件的修改历史
 git blame 文件名     # 查看文件的每一行是谁修改的</code></pre>
             </section>
         </article>
@@ -85,6 +90,7 @@ git blame 文件名     # 查看文件的每一行是谁修改的</code></pre>
     </footer>
 
     <script>
+        // 主题切换功能
         function toggleTheme() {
             const html = document.documentElement;
             const currentTheme = html.getAttribute('data-theme');
@@ -98,6 +104,29 @@ git blame 文件名     # 查看文件的每一行是谁修改的</code></pre>
         if (savedTheme) {
             document.documentElement.setAttribute('data-theme', savedTheme);
         }
+
+        // 移动端菜单切换
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+
+        // 点击菜单项后关闭菜单
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('nav-menu');
+                menu.classList.remove('show');
+            });
+        });
+
+        // 点击页面其他地方关闭菜单
+        document.addEventListener('click', (event) => {
+            const menu = document.getElementById('nav-menu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
     </script>
 </body>
 </html>
