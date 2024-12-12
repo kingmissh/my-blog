@@ -156,3 +156,25 @@ code {
     cursor: pointer;
     border-radius: 4px;
 }
+
+/* 联系方式样式 */
+.contact-info {
+    background-color: var(--header-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+}
+
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--text-color);
+}
+
+.contact-info a:hover {
+    border-bottom-style: solid;
+}
