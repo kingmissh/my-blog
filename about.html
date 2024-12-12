@@ -1,1 +1,67 @@
- 
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 - 我的博客</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="theme-switch" onclick="toggleTheme()">切换主题</button>
+    <header>
+        <h1>关于我</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="about-content">
+            <section>
+                <h2>个人简介</h2>
+                <p>你好！我是一名热爱编程和技术的开发者。这个博客是我学习 Git 的实践项目，同时也是分享学习经验的平台。</p>
+            </section>
+
+            <section>
+                <h2>技术栈</h2>
+                <ul class="skills-list">
+                    <li>Git 版本控制</li>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>学习目标</h2>
+                <ul class="goals-list">
+                    <li>深入掌握 Git 的使用</li>
+                    <li>学习前端开发最佳实践</li>
+                    <li>构建个人技术博客</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 我的博客. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // 加载保存的主题
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+    </script>
+</body>
+</html> 
