@@ -24,16 +24,33 @@
             <section>
                 <h3>1. 仓库初始化</h3>
                 <p>使用 git init 命令初始化一个新的Git仓库。这会创建一个.git目录来存储仓库信息。</p>
+                <pre><code>git init</code></pre>
             </section>
 
             <section>
                 <h3>2. 文件暂存</h3>
                 <p>使用 git add 命令将文件添加到暂存区，为提交做准备。</p>
+                <pre><code>git add 文件名    # 添加单个文件
+git add .        # 添加所有文件</code></pre>
             </section>
 
             <section>
                 <h3>3. 提交更改</h3>
-                <p>使用 git commit 命令将暂存的更��保存到仓库中。</p>
+                <p>使用 git commit 命令将暂存的更改保存到仓库中。</p>
+                <pre><code>git commit -m "提交说明"</code></pre>
+            </section>
+
+            <section>
+                <h3>4. 查看状态</h3>
+                <p>使用 git status 命令查看仓库的当前状态，包括哪些文件被修改、哪些文件在暂存区等。</p>
+                <pre><code>git status</code></pre>
+            </section>
+
+            <section>
+                <h3>5. 查看历史</h3>
+                <p>使用 git log 命令查看提交历史记录。</p>
+                <pre><code>git log          # 详细历史
+git log --oneline # 简洁历史</code></pre>
             </section>
         </article>
     </main>
