@@ -100,3 +100,25 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* 代码块样式 */
+pre {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* 警告文本样式 */
+.warning {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}

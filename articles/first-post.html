@@ -52,6 +52,30 @@ git add .        # 添加所有文件</code></pre>
                 <pre><code>git log          # 详细历史
 git log --oneline # 简洁历史</code></pre>
             </section>
+
+            <section>
+                <h3>6. 比较差异</h3>
+                <p>使用 git diff 命令查看文件的具体更改。</p>
+                <pre><code>git diff              # 查看未暂存的更改
+git diff --staged      # 查看已暂存的更改
+git diff commit1 commit2  # 比较两个提交之间的差异</code></pre>
+            </section>
+
+            <section>
+                <h3>7. 撤销更改</h3>
+                <p>Git提供了多种撤销更改的方式。</p>
+                <pre><code>git restore 文件名     # 撤销工作区的修改
+git restore --staged 文件名  # 撤销暂存区的修改
+git reset --hard HEAD^  # 撤销最近一次提交</code></pre>
+                <p class="warning">注意：使用 reset --hard 时要小心，它会永久删除更改！</p>
+            </section>
+
+            <section>
+                <h3>8. 查看文件历史</h3>
+                <p>查看特定文件的修改历史。</p>
+                <pre><code>git log -p 文件名     # 查看文件的修改历史
+git blame 文件名     # 查看文件的每一行是谁修改的</code></pre>
+            </section>
         </article>
     </main>
 
