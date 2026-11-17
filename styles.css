@@ -324,3 +324,30 @@ code {
         transform: none;
     }
 }
+
+/* 评论区样式 */
+.comments-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.comments-section h2 {
+    margin-bottom: 2rem;
+}
+
+.utterances {
+    max-width: 100%;
+}
+
+/* 确保评论框在移动端也能正常显示 */
+@media screen and (max-width: 768px) {
+    .comments-section {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    .comments-section h2 {
+        margin-bottom: 1.5rem;
+    }
+}
